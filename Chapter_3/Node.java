@@ -12,6 +12,7 @@ class Node {
 		}
 		curr.next = data;
 	}
+	/* ************************** Question 2.2 ************************ */
 //Recursive function to find the kth from last element in a linked list
 	public static int ktoLast(Node curr, int k){
 		//We have gotten to the end of the list, return 0
@@ -48,6 +49,28 @@ class Node {
 		}
 		return i;
 	}
+	/* **********************End Question 2.2 ************************ */
 
+	/* ************************* Question 2.3 ************************ */
+
+	//Implement an algorithm to delete a Node in the middle of a linked list given only that node
+	
+	public boolean deleteMiddle(Node mid){
+		if (mid == null){
+			return false;
+		}
+		if (mid.next == null){
+			return false;
+		}
+		mid.data = mid.next.data;
+		mid.next = mid.next.next;
+		return true;
+	}
+	/* *********************End  Question 2.3 ************************ */
+	/* ************************* Question 2.4 ************************ */
+
+	//Write code to partition a linked list around a value x so that all nodes less than x come before all nodes greater than x
+	
+	
 }
 
